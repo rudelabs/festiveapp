@@ -5,6 +5,8 @@ const {width,height} = Dimensions.get('window');
 import image_base from '../../images.json';
 import {day_title} from '../../Constants';
 
+import s from '../../styles/main.style'
+
 const DATA = [
     {
       id: 'bd7acbea-c1b1-46c2-aed5-3ad53abb28ba',
@@ -57,8 +59,19 @@ const InspiringImages = () => {
                 } */}
                 <FlatList
                     data={image_base.wishes}
-                    renderItem={(itemData) => (
-                        <View>
+                    numColumns={2}   
+                    columnWrapperStyle={{flex:1,justifyContent:'space-around'}}
+                    ListHeaderComponent={()=>{
+                      return(
+                        <View style={{flex:1,height:80,justifyContent:'center',paddingLeft:10}}>
+                          <Text style={[s.f22,s.b]}>Cards</Text>
+                          <Text style={[s.f14]}>Tap any card to share.</Text>
+                        </View>
+                      )
+                    }}
+                    renderItem={(itemData,i) => {
+                       //console.log('eerer',itemData.item.id%2)
+                        return(<View>
                           <TouchableOpacity
                             activeOpacity={0.8}
                             onPress={() => onShare(itemData.item.data_url)}
@@ -66,18 +79,19 @@ const InspiringImages = () => {
                             <Image
                               source={{uri: itemData.item.data_url}}
                               onLoad={() => console.log('Image loaded')}
-                              resizeMode="contain"
+                              resizeMode="cover"
                               style={{
-                                marginVertical: 20,
-                                width: Dimensions.get('window').width - 20,
-                                minHeight: 500,
-                                alignItems: 'center',
-                                justifyContent: 'center',
+                                width:180,
+                                minHeight: 250,
+                                borderRadius:14,
+                                marginTop:(itemData.item.id%2) ? 20 : 60,       
+                                alignItems: 'flex-start',
+                                justifyContent: 'flex-start',
                               }}
                             />
                           </TouchableOpacity>
-                        </View>
-                      )}
+                        </View>)
+                    }}
                     keyExtractor={item => item.id}
                 />
             </View>
@@ -87,15 +101,15 @@ const InspiringImages = () => {
 
 const styles = StyleSheet.create({
     container: {
-      flex: 1,
-      paddingLeft:10,
-      backgroundColor:'#000'
+      flex:2,
+      paddingLeft:4,
+      backgroundColor:'#FFF'
 
     },
     item: {
       padding: 20,
       marginVertical: 8,
-      marginHorizontal: 16,
+      marginHorizontal: 6,
     },
     title: {
       fontSize: 32,

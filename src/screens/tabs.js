@@ -2,6 +2,7 @@ import * as React from 'react';
 import { Text, View } from 'react-native';
 
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
+import Icon from 'react-native-vector-icons/dist/MaterialCommunityIcons';
 
 import StickerScreen from './TabScreens/stickers';
 import Wishes from './TabScreens/wishes';
@@ -20,13 +21,19 @@ export default function Tabs() {
   },[])
   return (
       <Tab.Navigator initialRouteName='Wish'>
-        <Tab.Screen name="InspiringImages"  options={{headerShown:false}}>
+        <Tab.Screen name="InspiringImages"  options={{headerShown:false,tabBarLabel:"Image",tabBarIcon:({color})=>(
+          <Icon name="image-outline" color={color} size={22} />
+        )}}>
           {(props)=><InspiringImages {...props} />}
           </Tab.Screen>
-        <Tab.Screen name="Wish" options={{headerShown:false}} >
+        <Tab.Screen name="Wish"   options={{headerShown:false,tabBarLabel:"Wish",tabBarIcon:({color})=>(
+          <Icon name="star" color={color} size={22} />
+        )}} >
           {(props)=><Wishes {...props} lang={'Hindi'} />}
           </Tab.Screen>
-        <Tab.Screen name="Stickers" component={StickerScreen} />
+        <Tab.Screen name="Stickers" component={StickerScreen}  options={{headerShown:false,tabBarLabel:"Stickers",tabBarIcon:({color})=>(
+          <Icon name="sticker-emoji" color={color} size={22} />
+        )}}  />
       </Tab.Navigator>
   );
 }
