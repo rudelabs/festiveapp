@@ -18,6 +18,7 @@ import Tabs from './src/screens/tabs';
 import getData from './src/methods/read';
 import { useSafeAreaFrame } from 'react-native-safe-area-context';
 import LanguageContext from './src/context/languageContext';
+import Settings from './src/screens/settings';
 
 const Stack = createNativeStackNavigator();
 
@@ -38,6 +39,7 @@ const Begin=({onBoard})=>{
           <Stack.Screen name="Welcome" component={Welcome} />
           <Stack.Screen name="Languages" component={Languages} />
           <Stack.Screen name="Home" component={Tabs} />
+          <Stack.Screen name="Settings" component={Settings} />
         </Stack.Navigator>
         
       </NavigationContainer>

@@ -93,7 +93,7 @@ const Wishes = (props)=>{
               <Text style={[s.f14]}>Good wishes for your loved ones.</Text>
           </View>
           <View style={{flex:1,alignItems:'flex-end',paddingRight:10}}>
-              <TouchableOpacity onPress={()=>props.navigation.navigate('Languages',{inner:true})} style={{
+              <TouchableOpacity onPress={()=>props.navigation.navigate('Settings',{inner:true})} style={{
                   width:80,
                   height:40,
                   backgroundColor:'#a3a3a356',
