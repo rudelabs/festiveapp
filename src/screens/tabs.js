@@ -20,17 +20,18 @@ export default function Tabs() {
     .catch(e=>console.log(e));
   },[])
   return (
-      <Tab.Navigator initialRouteName='Wish'>
-        <Tab.Screen name="InspiringImages"  options={{headerShown:false,tabBarLabel:"Image",tabBarIcon:({color})=>(
-          <Icon name="image-outline" color={color} size={22} />
-        )}}>
-          {(props)=><InspiringImages {...props} />}
-          </Tab.Screen>
+      <Tab.Navigator initialRouteName='InspiringImages'>
         <Tab.Screen name="Wish"   options={{headerShown:false,tabBarLabel:"Wish",tabBarIcon:({color})=>(
           <Icon name="star" color={color} size={22} />
         )}} >
           {(props)=><Wishes {...props} lang={'Hindi'} />}
           </Tab.Screen>
+        <Tab.Screen name="InspiringImages"  options={{headerShown:false,tabBarLabel:"Image",tabBarIcon:({color})=>(
+          <Icon name="image-outline" color={color} size={22} />
+        )}}>
+          {(props)=><InspiringImages {...props} />}
+          </Tab.Screen>
+        
         <Tab.Screen name="Stickers" component={StickerScreen}  options={{headerShown:false,tabBarLabel:"Stickers",tabBarIcon:({color})=>(
           <Icon name="sticker-emoji" color={color} size={22} />
         )}}  />

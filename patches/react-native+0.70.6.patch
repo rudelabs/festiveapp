@@ -7,10 +7,10 @@ similarity index 100%
 rename from node_modules/react-native/ReactCommon/hermes/inspector/tools/msggen/.npmignore
 rename to node_modules/react-native/ReactCommon/hermes/inspector/tools/msggen/.gitignore
 diff --git a/node_modules/react-native/index.js b/node_modules/react-native/index.js
-index d59ba34..757510e 100644
+index d59ba34..7d01f7d 100644
 --- a/node_modules/react-native/index.js
 +++ b/node_modules/react-native/index.js
-@@ -434,36 +434,53 @@ module.exports = {
+@@ -434,33 +434,46 @@ module.exports = {
        );
    },
    // Deprecated Prop Types
@@ -42,7 +42,7 @@ index d59ba34..757510e 100644
 +  //       "ViewPropTypes exported from 'deprecated-react-native-prop-types'.",
 +  //   );
 +  // },
-+
++  // Deprecated Prop Types
    get ColorPropType(): $FlowFixMe {
 -    invariant(
 -      false,
@@ -75,15 +75,8 @@ index d59ba34..757510e 100644
 -    );
 +    return require("deprecated-react-native-prop-types").ViewPropTypes
    },
-+  
-+
-+
  };
  
-+
- if (__DEV__) {
-   /* $FlowFixMe[prop-missing] This is intentional: Flow will error when
-    * attempting to access ART. */
 diff --git a/node_modules/react-native/scripts/.packager.env b/node_modules/react-native/scripts/.packager.env
 new file mode 100644
 index 0000000..21a13cf

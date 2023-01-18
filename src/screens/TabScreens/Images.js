@@ -1,9 +1,11 @@
 import React from 'react'
 import {View,StyleSheet,StatusBar,Dimensions,Text,FlatList,Image, ScrollView, TouchableOpacity} from 'react-native'
 import ShareImage from 'react-native-share';
+import Lightbox from 'react-native-lightbox-v2';
 const {width,height} = Dimensions.get('window');
 import image_base from '../../images.json';
 import {day_title} from '../../Constants';
+
 
 import s from '../../styles/main.style'
 
@@ -27,7 +29,7 @@ const DATA = [
       <Text style={styles.title}>{title}</Text>
     </View>
   );
-const InspiringImages = () => {
+const InspiringImages = ({navigation}) => {
 
     const onShare=(imagebase64)=>{
       console.log(imagebase64);
@@ -74,7 +76,10 @@ const InspiringImages = () => {
                         return(<View>
                           <TouchableOpacity
                             activeOpacity={0.8}
-                            onPress={() => onShare(itemData.item.data_url)}
+                            onPress={() => {
+                              //onShare(itemData.item.data_url)
+                              navigation.navigate('FullImage',{img:itemData.item.data_url});
+                            }}
                             >
                             <Image
                               source={{uri: itemData.item.data_url}}

@@ -91,13 +91,14 @@ export default StyleSheet.create({
     },
     buttonSecondary:{
       padding:16,
-      width:'90%',
+      width:'95%',
       backgroundColor:'cornflowerblue',
       borderWidth:1,
       borderColor:'#FFF',
       borderRadius:0,
       justifyContent:'center',
       alignItems:'center',
+      alignSelf:'flex-start'
     },
 
     lightboximg:{

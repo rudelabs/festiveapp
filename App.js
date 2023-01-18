@@ -14,6 +14,7 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Languages from './src/screens/languages';
 import Welcome from './src/screens/welcome';
 import Tabs from './src/screens/tabs';
+import ImageView from './src/screens/imageview';
 
 import getData from './src/methods/read';
 import { useSafeAreaFrame } from 'react-native-safe-area-context';
@@ -40,6 +41,7 @@ const Begin=({onBoard})=>{
           <Stack.Screen name="Languages" component={Languages} />
           <Stack.Screen name="Home" component={Tabs} />
           <Stack.Screen name="Settings" component={Settings} />
+          <Stack.Screen name="FullImage" component={ImageView}/>
         </Stack.Navigator>
         
       </NavigationContainer>
