@@ -95,7 +95,7 @@ export default StyleSheet.create({
       backgroundColor:'cornflowerblue',
       borderWidth:1,
       borderColor:'#FFF',
-      borderRadius:0,
+      borderRadius:16,
       justifyContent:'center',
       alignItems:'center',
       alignSelf:'flex-start'

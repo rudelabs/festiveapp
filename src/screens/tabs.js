@@ -20,7 +20,7 @@ export default function Tabs() {
     .catch(e=>console.log(e));
   },[])
   return (
-      <Tab.Navigator initialRouteName='InspiringImages'>
+      <Tab.Navigator initialRouteName='Wish'>
         <Tab.Screen name="Wish"   options={{headerShown:false,tabBarLabel:"Wish",tabBarIcon:({color})=>(
           <Icon name="star" color={color} size={22} />
         )}} >
