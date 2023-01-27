@@ -13,7 +13,7 @@ const ImageView = ({route,navigation})=>{
     const onShare=(imagebase64)=>{
         console.log(imagebase64);
         const shareOptions = {
-          title: 'Share via',
+          title: 'Share by',
           url: imagebase64,
           filename: day_title, // only for base64 file in Android
         };
