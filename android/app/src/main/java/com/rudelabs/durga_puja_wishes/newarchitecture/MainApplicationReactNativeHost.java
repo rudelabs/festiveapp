@@ -1,4 +1,4 @@
-package com.festival.newarchitecture;
+package com.rudelabs.durga_puja_wishes.newarchitecture;
 
 import android.app.Application;
 import androidx.annotation.NonNull;
@@ -19,9 +19,9 @@ import com.facebook.react.fabric.CoreComponentsRegistry;
 import com.facebook.react.fabric.FabricJSIModuleProvider;
 import com.facebook.react.fabric.ReactNativeConfig;
 import com.facebook.react.uimanager.ViewManagerRegistry;
-import com.festival.BuildConfig;
-import com.festival.newarchitecture.components.MainComponentsRegistry;
-import com.festival.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
+import com.rudelabs.durga_puja_wishes.BuildConfig;
+import com.rudelabs.durga_puja_wishes.newarchitecture.components.MainComponentsRegistry;
+import com.rudelabs.durga_puja_wishes.newarchitecture.modules.MainApplicationTurboModuleManagerDelegate;
 import java.util.ArrayList;
 import java.util.List;
 

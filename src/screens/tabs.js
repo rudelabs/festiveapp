@@ -22,18 +22,18 @@ export default function Tabs() {
   return (
       <Tab.Navigator initialRouteName='Wish'>
         <Tab.Screen name="Wish"   options={{headerShown:false,tabBarLabel:"Wish",tabBarIcon:({color})=>(
-          <Icon name="star" color={color} size={22} />
+          <Icon name="text-long" color={color} size={30} />
         )}} >
           {(props)=><Wishes {...props} lang={'Hindi'} />}
           </Tab.Screen>
         <Tab.Screen name="InspiringImages"  options={{headerShown:false,tabBarLabel:"Image",tabBarIcon:({color})=>(
-          <Icon name="image-outline" color={color} size={22} />
+          <Icon name="image-outline" color={color} size={30} />
         )}}>
           {(props)=><InspiringImages {...props} />}
           </Tab.Screen>
         
         <Tab.Screen name="Stickers" component={StickerScreen}  options={{headerShown:false,tabBarLabel:"Stickers",tabBarIcon:({color})=>(
-          <Icon name="sticker-emoji" color={color} size={22} />
+          <Icon name="sticker-emoji" color={color} size={30} />
         )}}  />
       </Tab.Navigator>
   );

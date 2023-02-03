@@ -1,4 +1,4 @@
-package com.festival;
+package com.rudelabs.durga_puja_wishes;
 import android.os.Bundle;
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;

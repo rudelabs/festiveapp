@@ -1,4 +1,4 @@
-package com.festival;
+package com.rudelabs.durga_puja_wishes;
 
 import android.app.Application;
 import android.content.Context;
@@ -9,7 +9,7 @@ import com.facebook.react.ReactNativeHost;
 import com.facebook.react.ReactPackage;
 import com.facebook.react.config.ReactFeatureFlags;
 import com.facebook.soloader.SoLoader;
-import com.festival.newarchitecture.MainApplicationReactNativeHost;
+import com.rudelabs.durga_puja_wishes.newarchitecture.MainApplicationReactNativeHost;
 import java.lang.reflect.InvocationTargetException;
 import java.util.List;
 

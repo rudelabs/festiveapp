@@ -1,4 +1,4 @@
-package com.festival.newarchitecture.modules;
+package com.rudelabs.durga_puja_wishes.newarchitecture.modules;
 
 import com.facebook.jni.HybridData;
 import com.facebook.react.ReactPackage;

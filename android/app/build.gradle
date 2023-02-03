@@ -139,7 +139,8 @@ android {
     compileSdkVersion rootProject.ext.compileSdkVersion
 
     defaultConfig {
-        applicationId "com.festival"
+        multiDexEnabled true
+        applicationId "com.rudelabs.durga_puja_wishes"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

@@ -1,4 +1,4 @@
-package com.festival.newarchitecture.components;
+package com.rudelabs.durga_puja_wishes.newarchitecture.components;
 
 import com.facebook.jni.HybridData;
 import com.facebook.proguard.annotations.DoNotStrip;
